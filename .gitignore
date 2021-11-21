@@ -1,0 +1,3 @@
+*.pyc
+fastapi-venv/
+__pycache__/

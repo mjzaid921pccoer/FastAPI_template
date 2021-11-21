@@ -1,0 +1,7 @@
+> virtualenv fastapi-venv
+> fastapi-venv\Scripts\activate
+
+(fastapi-venv) > pip install fastapi
+(fastapi-venv) > pip install "uvicorn[standard]"
+
+(fastapi-venv) > uvicorn main:app --reload
