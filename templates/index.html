@@ -1,0 +1,21 @@
+{% include 'header.html'%}
+{% include 'navbar.html'%}
+
+{% if query %}
+    {{query}}
+{% endif %}
+
+<p>{{introduction}}</p>
+<h2>Features</h2>
+<ul>
+{% for featues in Features%}
+    <li>{{featues}}</li>
+{% endfor %}
+<ul>
+<b>Creator<b>
+{{creator['name']}} : <a href="{{creator['LinkedIn']}}">LinkedIn</a>
+
+
+
+
+{% include 'footer.html'%}
