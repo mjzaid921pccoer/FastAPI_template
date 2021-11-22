@@ -1,6 +1,6 @@
 #imports
 from typing import Optional
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Form
 from fastapi import responses
 
 from fastapi.templating import Jinja2Templates
@@ -72,8 +72,6 @@ def home(request : Request):
     response = { "request" : request, "title" : "App", "introduction" : intro, "Features" : features, "creator" : creator}
     return templates.TemplateResponse("index.html", response)
 
-@app.get("/id")
-def read_item(q: Optional[str] = None):
-    if q:
-        return {"q": q}
-    return {"No Query": ""}
+@app.post("/search")
+def Search(id :str =Form(...)):
+    return {"id": id }

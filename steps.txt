@@ -3,6 +3,6 @@
 
 (fastapi-venv) > pip install fastapi
 (fastapi-venv) > pip install "uvicorn[standard]"
-(fastapi-venv) > pip install jiinja2
+(fastapi-venv) > pip install jinja2
 
 (fastapi-venv) > uvicorn main:app --reload
